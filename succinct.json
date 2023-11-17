@@ -6,8 +6,7 @@
             "framework": "noir",
             "baseDir": ".",
             "buildCommand": " mkdir -p build && cd circuits && nargo check && nargo build && nargo codegen-verifier && cd .. && cp -r circuits/ build/",
-            "proveCommand": "cd build && nargo prove"
-
+            "proveCommand": "cd build && ../convert_input.sh && nargo prove | ../convert_output.sh"
         }
     ]
 }

@@ -16,5 +16,11 @@ done
 # Prepend '0x' to the final output
 output="0x$output"
 
+# Read the first line from proofs/circuits.proof
+proof=$(head -n 1 proofs/circuits.proof)
+
+# Prepend '0x' to the proof
+proof="0x$proof"
+
 # Write to output.json
-echo "{\"output\": \"$output\"}" > output.json
+echo -e "{\"output\": \"$output\", \n\"proof\": \"$proof\"}" > output.json
