@@ -5,8 +5,9 @@
             "name": "succinct-noir-demo",
             "framework": "noir",
             "baseDir": ".",
-            "buildCommand": "cargo run --package succinct-alpha-demo --release build && mv ./target/release/succinct-alpha-demo ./build/succinct-alpha-demo",
-            "proveCommand": "RUST_LOG=debug ./build/succinct-alpha-demo prove input.json"
+            "buildCommand": " mkdir -p build && cd circuits && nargo check && nargo build && nargo codegen-verifier && cd .. && cp -r circuits/ build/",
+            "proveCommand": "cd build && nargo prove"
+
         }
     ]
 }
