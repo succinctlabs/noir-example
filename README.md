@@ -1,7 +1,7 @@
 # noir-succinct-template
-Example Noir Circuit for use in Succinct's Proving Service
+Example Noir Circuit for use in [Succinct's Proving Service](alpha.succinct.xyz).
 
-This implements the [succinct.json](succinct.json) commands expected by [Succinct](alpha.succinct.xyz) to use their proving service.
+This repostiroy contains a Noir contract and implements the adaptor commands in [succinct.json](succinct.json) for making `nargo prove` compatible with [Succinct](succinct.xyz)'s proving service.
 
 To save gas costs, Succinct expects circuits to [expose inputs and outputs as a single hash](https://github.com/succinctlabs/succinctx/blob/main/contracts/src/interfaces/IFunctionVerifier.sol).  (Documentation for that is coming soon).
 
