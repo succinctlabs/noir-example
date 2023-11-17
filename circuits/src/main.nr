@@ -1,9 +1,11 @@
 use dep::std::hash::sha256;
+use dep::std::println;
 
-fn main(input_bytes: [u8; 100])-> pub [u8; 32] {
+fn main(input_bytes: [u8; 100])-> pub (Field, Field) {
     // let input_bytes = [1, 2, 3, 4, 5, 6, 7, 8];
     let input_hash = sha256(input_bytes);
-    input_hash
+    println(input_hash);    
+    (input_hash[0] as Field, input_hash[1] as Field)
 }
 
 
