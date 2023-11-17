@@ -1,0 +1,12 @@
+{
+    "$schema": "https://raw.githubusercontent.com/succinctlabs/succinctx/main/assets/schema.json",
+    "entrypoints": [
+        {
+            "name": "succinct-noir-demo",
+            "framework": "noir",
+            "baseDir": ".",
+            "buildCommand": "cargo run --package succinct-alpha-demo --release build && mv ./target/release/succinct-alpha-demo ./build/succinct-alpha-demo",
+            "proveCommand": "RUST_LOG=debug ./build/succinct-alpha-demo prove input.json"
+        }
+    ]
+}
