@@ -22,5 +22,5 @@ proof=$(head -n 1 proofs/circuits.proof)
 # Prepend '0x' to the proof
 proof="0x$proof"
 
-# Write to output.json
-echo -e "{\"output\": \"$output\", \n\"proof\": \"$proof\"}" > output.json
+# Write to output.json in the specified format
+echo -e "{\n\t\"type\": \"res_bytes\",\n\t\"data\": {\n\t\t\"output\": \"$output\",\n\t\t\"proof\": \"$proof\"\n\t}\n}" > output.json

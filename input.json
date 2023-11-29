@@ -1,3 +1,8 @@
 {
-    "input": "0x6f5e77cbf9931febde07ff1078a3204cffcac6f73f856deac48e9ece1e273dba"
+    "type": "req_bytes",
+    "releaseId": "f2210f91-eb32-4661-a0e6-63dbcfb56079",
+    "data": {
+        "input": "0xfa3d0a0ca74229de"
+    },
+    "env_vars": []
 }
