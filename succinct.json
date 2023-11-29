@@ -6,7 +6,7 @@
             "framework": "noir",
             "baseDir": ".",
             "buildCommand": "mkdir -p build && cd circuits && nargo check && nargo build && nargo codegen-verifier && cd .. && tar -czvf build/circuits.tar.gz circuits && ./convert_verifier.sh && cp ./circuits/contract/circuits/plonk_vk.sol ./build/FunctionVerifier.sol && cp ./convert_input.sh ./build/convert_input.sh && cp ./convert_output.sh ./build/convert_output.sh && cp ./Prover.toml ./build/Prover.toml",
-            "proveCommand": "cp input.json ./build/input.json && cd build && ./convert_input.sh && tar -xzvf circuits.tar.gz && cd circuits && cat ../Prover.toml > Prover.toml && nargo prove > ../output.txt && cat ../output.txt | ../convert_output.sh && cp output.json > ../../output.json && cd ../.."
+            "proveCommand": "cp input.json ./build/input.json && cd build && ./convert_input.sh && tar -xzvf circuits.tar.gz && cd circuits && cat ../Prover.toml > Prover.toml && nargo prove > ../output.txt && cat ../output.txt | ../convert_output.sh && cat output.json > ../../output.json && cd ../.."
         }
     ]
 }
